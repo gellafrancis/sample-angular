@@ -1,0 +1,23 @@
+<!-- Heading -->
+<div class="container mt-3">
+    <div>
+      <h4 class="h4">Required Three Whole Numbers</h4>
+    </div>
+</div>
+
+<!-- Input -->
+<div class="container mt-3">
+    <div class="form-group">
+        <label>Input number: </label>
+        <input type="number" class="form-control" (keyup)="onKey($event)">
+    </div>
+</div>
+
+<!-- Result -->
+<div class="container mt-5">
+    <div class="d-flex justify-content-center">
+      <h1 class="display-3">Result : <app-challenge-one-utility [userInput]="input1"></app-challenge-one-utility></h1>
+    </div>
+</div>
+
+

@@ -1,0 +1,19 @@
+
+<div class="container-fluid my-5" [ngClass]="mode ? 'bg-dark' : 'bg-light'">
+    <div class="container mt-3">
+        <div>
+          <h4 class="h4" [ngClass]="mode ? 'text-light' : 'text-dark'">Dark Mode</h4>
+        </div>
+    </div>
+    <div class="container my-5">
+        <button type="button" class="btn btn-lg btn-block" [ngClass]="mode ? 'btn-primary' : 'btn-dark'"  (click)="mode = false"> Light </button>
+    </div>
+    
+    <div class="container my-5">
+        <div class="display-3" [ngClass]="mode ? 'text-light' : 'text-dark'">DARK MODE: {{mode ? "Active" : "Deactive"}}</div>
+    </div>
+    
+    <app-challenge-three-utility [btnMode]="mode" (modeEvent)="mode = true"></app-challenge-three-utility>
+</div>
+
+

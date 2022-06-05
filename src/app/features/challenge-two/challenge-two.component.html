@@ -1,0 +1,35 @@
+<!-- Heading -->
+<div class="container mt-3">
+    <div>
+      <h4 class="h4"></h4>
+    </div>
+</div>
+
+<!-- Input -->
+<div class="container mt-3">
+  <div>
+    <h4 class="h4">Money and Currency</h4>
+  </div>
+</div>
+
+<div class="container mt-3">
+    <div class="form-group">
+        <label>Input money: </label>
+        <input type="number" class="form-control" value="0" (keyup)="onKeyMoney($event)">
+    </div>
+    <div class="input-group mb-3">
+        <label class="input-group-text" for="inputGroupSelect01">Currency</label>
+        <select class="form-select w-50" (change)="onSelectCurrency($event)" value="USD">
+          <option  *ngFor="let currency of currencies" [value]="currency">
+            {{ currency }}
+          </option>
+        </select>
+      </div>
+</div>
+
+<!-- Result -->
+<div class="container mt-5">
+    <div class="d-flex justify-content-center">
+      <h1 class="display-3">Result : <app-challenge-two-utility [userInputMoney]="money" [userInputCurrency]="currency"></app-challenge-two-utility></h1>
+    </div>
+</div>

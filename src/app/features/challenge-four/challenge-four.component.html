@@ -1,0 +1,38 @@
+<div class="container mt-3">
+    <div>
+      <h4 class="h4">Target Result</h4>
+    </div>
+</div>
+
+
+<div class="container mt-3">
+    <div class="form-group">
+        <label>Input food name: </label>
+        <input type="text" class="form-control" placeholder="Name" [(ngModel)]="foodName">
+    </div>
+</div>
+<div class="container mt-3">
+    <div class="form-group">
+        <label>Input price: </label>
+        <input type="number" class="form-control" placeholder="Price" [(ngModel)]="foodPrice">
+    </div>
+</div>
+
+<div class="container my-5">
+    <button type="button" class="btn btn-lg btn-block btn-success" (click)="addFood()"> Add Food </button>
+</div>
+
+<div class="container my-5">
+    <div class="form-group">
+        <label>How many food you want to display in the list? (Change the value to refresh the list) </label>
+        <input type="number" class="form-control" placeholder="" value="1" [(ngModel)]="numberFood">
+    </div>
+</div>
+
+<div class="container my-5">
+    <h5 class="h5"> {{ objFood | displayfood: numberFood}}</h5>   
+</div>
+
+
+
+
